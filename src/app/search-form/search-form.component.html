@@ -1,0 +1,36 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container search-form">
+    <div class="row">
+      <mat-form-field class="col-sm-8">
+        <input matInput placeholder="Mots clés">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Catégories" [formControl]="categories" multiple>
+          <mat-option *ngFor="let categorie of categorieList" [value]="categorie">{{categorie}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-sm-4">
+        <input matInput placeholder="Auteur">
+      </mat-form-field>
+      <mat-form-field class="col-sm-4">
+        <input matInput placeholder="Editeur">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Année" multiple>
+          <mat-option>1999</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="col-sm-4">
+        <input matInput placeholder="Ville ou code postal">
+      </mat-form-field>
+      <div class="col-sm-4">
+        <mat-checkbox>Rechercher uniquement dans les titres</mat-checkbox>
+      </div>
+    </div>
+  </div>
+</div>
